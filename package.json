@@ -1,25 +1,19 @@
 {
-  "name": "tutorial-node-database",
+  "name": "tutorial-eb-node-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/roberttod/tutorial-node-database.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate:latest": "knex migrate:latest",
+    "start": "npm run migrate:latest && node index.js"
   },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/roberttod/tutorial-node-database/issues"
-  },
-  "homepage": "https://github.com/roberttod/tutorial-node-database#readme",
+  "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "knex": "^0.13.0",
-    "mysql": "^2.13.0"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "knex": "^0.14.6",
+    "mysql": "^2.15.0"
   }
 }
