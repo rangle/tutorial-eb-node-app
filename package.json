@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "migrate:latest": "knex migrate:latest",
-    "start": "npm run migrate:latest && node index.js"
+    "start": "npm run migrate:latest && node index.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
   "license": "MIT",
@@ -14,6 +16,8 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "knex": "^0.14.6",
-    "mysql": "^2.15.0"
-  }
+    "mysql": "^2.15.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
